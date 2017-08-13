@@ -1,0 +1,13 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+.col-sm-10{
+  width: 600px;
+  margin-left: 250px;
+  margin-top: 50px;
+}
+.form-horizontal{
+  margin-left: 50px;
+}

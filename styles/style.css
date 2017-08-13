@@ -1,0 +1,331 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Arial', serif;
+    position: relative;
+}
+
+.footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+.container{
+  padding: 20px 20px;
+}
+
+.wrap-content{
+    margin: 20px 20px;
+    background-color: beige;
+}
+
+.img-block{
+    float: left;
+    margin: 0 20px;
+}
+.movie-title {
+    font-size: 20px;
+    color: green;
+}
+
+.movie-title a:hover {
+    text-decoration: none;
+    color: brown;
+}
+
+.movie-names {
+    margin: 10px 0;
+    display: block;
+    
+}
+
+.names{
+    display: inline;
+    color: grey;
+    margin-right: 10px;
+    font-size: 15px;
+     
+}
+.values{
+    display: inline;
+    font-size: 15px;
+}
+
+.pagination {
+    display: inline-block;
+}
+.pagination a{
+    color: black;
+    float: left;
+    padding: 5px 5px;
+    text-decoration: none;
+    border: 1px solid grey;
+    font-size: 15px;
+}
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.button-div{
+    display: block;
+}
+
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.dropdown {
+    padding-right: 50px;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.form-group a{
+    text-decoration: none;
+    color: black;
+}
+
+.form-group a:hover{
+    color: red;
+}  
+/****** SIGNUP MODAL ******/
+
+.signmodal-container{
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+
+.signmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.signmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.signmodal-container input[type=text], input[type=password] {
+  height: 30px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+.signmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+signmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+}
+
+.signmodal-submit {
+  border: 1px solid #3079ed;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  padding: 10px 0px;
+  font-family: roboto;
+  font-size: 14px;
+}
+
+.signmodal-submit:hover {
+  border: 1px solid #2f5bb7;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+}
+
+.signmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: left;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+  display: block;
+} 
+
+
+
+
+/****** LOGIN MODAL ******/
+
+.loginmodal-container{
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 30px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+}
+
+.loginmodal-submit {
+  border: 1px solid #3079ed;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  padding: 10px 0px;
+  font-family: roboto;
+  font-size: 14px;
+}
+
+.loginmodal-submit:hover {
+  border: 1px solid #2f5bb7;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: left;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+  display: block;
+} 
+
+.login-help{
+  font-size: 12px;
+}
+.signup-message{
+  font-family: roboto;
+  font-size: 14px;
+  padding-left: 400px;
+  padding: 17px 0px;
+  color: firebrick;
+  
+}
+
+.login-message{
+  font-family: roboto;
+  font-size: 14px;
+  padding: 17px 0px;
+  color: firebrick;
+  
+}
+.sidebar-nav li{
+  list-style: none;
+}
+
+.sidebar-nav li a{
+  color: black;
+  padding: 10px 10px;
+}
+
+.sidebar-wrapper{
+  background-color: gainsboro;
+}

@@ -1,0 +1,95 @@
+﻿
+ALTER TABLE `directors`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name_UNIQUE` (`name`);
+  
+  ALTER TABLE `genres`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name_UNIQUE` (`name`);
+
+  
+  ALTER TABLE `movies`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `title_UNIQUE` (`title`);
+-- Indexes for table `movies_directors`
+--
+ALTER TABLE `movies_directors`
+  ADD PRIMARY KEY (`movies_id`,`directors_id`),
+  ADD KEY `fk_movies_has_directors_directors1_idx` (`directors_id`),
+  ADD KEY `fk_movies_has_directors_movies_idx` (`movies_id`);
+
+--
+-- Indexes for table `movies_genres`
+--
+ALTER TABLE `movies_genres`
+  ADD PRIMARY KEY (`movies_id`,`genres_id`),
+  ADD KEY `fk_movies_has_genres_genres1_idx` (`genres_id`),
+  ADD KEY `fk_movies_has_genres_movies1_idx` (`movies_id`);
+
+--
+-- Indexes for table `movies_stars`
+--
+ALTER TABLE `movies_stars`
+  ADD PRIMARY KEY (`movies_id`,`stars_id`),
+  ADD KEY `fk_movies_has_stars_stars1_idx` (`stars_id`),
+  ADD KEY `fk_movies_has_stars_movies1_idx` (`movies_id`);
+
+--
+-- Indexes for table `stars`
+--
+ALTER TABLE `stars`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name_UNIQUE` (`name`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `directors`
+--
+ALTER TABLE `directors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1100;
+--
+-- AUTO_INCREMENT for table `genres`
+--
+ALTER TABLE `genres`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2532;
+--
+-- AUTO_INCREMENT for table `movies`
+--
+ALTER TABLE `movies`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
+--
+-- AUTO_INCREMENT for table `stars`
+--
+ALTER TABLE `stars`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2993;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `movies_directors`
+--
+ALTER TABLE `movies_directors`
+  ADD CONSTRAINT `fk_movies_has_directors_directors1` FOREIGN KEY (`directors_id`) REFERENCES `directors` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_movies_has_directors_movies` FOREIGN KEY (`movies_id`) REFERENCES `movies` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `movies_genres`
+--
+ALTER TABLE `movies_genres`
+  ADD CONSTRAINT `fk_movies_has_genres_genres1` FOREIGN KEY (`genres_id`) REFERENCES `genres` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_movies_has_genres_movies1` FOREIGN KEY (`movies_id`) REFERENCES `movies` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `movies_stars`
+--
+ALTER TABLE `movies_stars`
+  ADD CONSTRAINT `fk_movies_has_stars_movies1` FOREIGN KEY (`movies_id`) REFERENCES `movies` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_movies_has_stars_stars1` FOREIGN KEY (`stars_id`) REFERENCES `stars` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
