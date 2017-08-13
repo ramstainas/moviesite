@@ -18,7 +18,7 @@
     </div>
 	<ul class="nav navbar-nav">
 		<li><a href="index.php">Home</a></li>
-		<li><a href="#">Top movies</a></li>
+		<li><a href="topmovies.php">Top movies</a></li>
 	</ul>
 	  <ul class="nav navbar-nav navbar-right">
 	<?php

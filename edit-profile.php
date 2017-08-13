@@ -60,7 +60,7 @@ while($row = mysqli_fetch_assoc($result)){
             <div class="form-group">
                 <label class="col-md-4 control-label">Email: </label>
                 <div class="col-md-4">
-                <input type="text" name="name4" id="name4" value="<?php echo $row['email']; ?>" />
+                <input type="text" name="name4" id="name4" value="<?php echo $row['email']; ?>" readonly />
                 <a><span class="glyphicon glyphicon-pencil" id= "editBtn" onclick=editName('4')></span></a>
               </div>
             </div>

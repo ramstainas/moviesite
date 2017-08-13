@@ -120,6 +120,14 @@ li.dropdown {
 .form-group a:hover{
     color: red;
 }  
+
+#top-title{
+  text-decoration: none;
+  color: black;
+}
+#top-title:hover{
+  color:green;
+}
 /****** SIGNUP MODAL ******/
 
 .signmodal-container{
