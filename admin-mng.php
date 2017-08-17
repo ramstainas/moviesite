@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
     <?php include_once 'sidebar.php'?>
   </div>
   
-<div class="col-md-8"> 
+<div class="col-md-9"> 
 <?php
 if(mysqli_num_rows($result) > 0){
     
